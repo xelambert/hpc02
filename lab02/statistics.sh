@@ -6,7 +6,7 @@
 cd #PBS_O_WORKDIR
 sleep 10
 
-for i in (1..100)
+for i in {1..100}
 do
 	for j in {0..3}
 	do
@@ -19,5 +19,5 @@ echo "Statistics:" >> statistics_out.out
 
 for k in {1..10}
 do	
-	echo "s$k = 'cat ./statistics_out.out | grep -o "s\"$k".cluster" | wc -l'" >> statistics_out.out
+	echo "s$k = `cat ./statistics_out.out | grep -o "s\"$k".cluster" | wc -l`" >> statistics_out.out
 done
