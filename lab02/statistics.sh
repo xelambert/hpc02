@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -N Kushnir_mpi_statisticss
+#PBS -N Kushnir_mpi_statistics
 #PBS -l walltime=00:01:00
 #PBS -l nodes=1:ppn=1
 
@@ -19,5 +19,5 @@ echo "Statistics:" >> statistics_out.out
 
 for k in {1..10}
 do	
-	echo "s$k = `cat ./statistics_out.out | grep -o "s\"$k".cluster" | wc -l`" >> statistics_out.out
+	echo "s$k = `cat ./statistics_out.out | grep -o "s\"$k\".cluster" | wc -l`" >> statistics_out.out
 done
